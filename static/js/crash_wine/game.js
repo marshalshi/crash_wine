@@ -68,3 +68,12 @@ function add_red_wine(){
         append_red_wine();
     }
 }
+
+function game_over(){
+    setTimeout(function(){
+        var score = $('#score').data('score');
+        $('#final_score').text(score);
+        $('#game_board').addClass('hidden');
+        $('#game_over').removeClass('hidden');
+    }, 8000);
+}
