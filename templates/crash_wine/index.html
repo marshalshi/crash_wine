@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block head %}
+    <title>Crash Wine</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--meta property="og:image" content="http://www.friendsmash.com/images/logo_large.jpg"/-->
+
+    <link href="{% static 'css/reset.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/crash_wine/style.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script src="{% static 'js/crash_wine/core.js' %}"></script>
+    <!--script src="{% static 'js/crash_wine/ui.js' %}"></script-->
+    <script src="{% static 'js/crash_wine/game.js' %}"></script>
+
+    <!--[if IE]><script src="{% static 'js/excanvas.js' %}"></script><![endif]-->
+{% endblock %}
+
+{% block body %}
+
+    <section>
+
+      <div id="game_board">
+        <canvas id="canvas"></canvas>
+      </div>
+      
+    </section>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '801367206608067',
+              xfbml      : true,
+              version    : 'v2.3'
+            });
+
+            // ADD ADDITIONAL FACEBOOK CODE HERE
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endblock %}
