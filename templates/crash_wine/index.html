@@ -13,6 +13,7 @@
     <link href="{% static 'css/crash_wine/style.css' %}" rel="stylesheet" type="text/css">
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//connect.facebook.net/en_US/sdk.js"></script>
 
     <script src="{% static 'js/crash_wine/core.js' %}"></script>
     <!--script src="{% static 'js/crash_wine/ui.js' %}"></script-->
@@ -22,6 +23,7 @@
 {% endblock %}
 
 {% block body %}
+    <h1 id="fb-welcome"></h1>
 
     <section>
 
@@ -31,23 +33,4 @@
       
     </section>
 
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '801367206608067',
-              xfbml      : true,
-              version    : 'v2.3'
-            });
-
-            // ADD ADDITIONAL FACEBOOK CODE HERE
-          };
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-    </script>
 {% endblock %}
