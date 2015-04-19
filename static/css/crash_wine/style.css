@@ -14,7 +14,8 @@ body {
 }
 
 #game_area {
-    background: url('../../images/crash_wine/background.png');
+//    background: url('../../images/crash_wine/background.png');
+    background: #333;
     margin: auto;
 }
 
