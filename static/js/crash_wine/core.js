@@ -1,7 +1,7 @@
 
 $(function() {
 
-    $('#start_game h4').click(function(){
+    $('#start_game h4').on('click tap',function(){
         $('#start_game').addClass('hidden');
         add_red_wine();
         $('#game_board').removeClass('hidden');

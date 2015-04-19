@@ -31,7 +31,7 @@ function create_red_wine(){
         width: red_wine_width + 'px', height: red_wine_height + 'px'
     });
 
-    red_wine.on('click', function(e) {
+    red_wine.on('click tap', function(e) {
         click_wine($('#score'));
         // remove red_wine;
         red_wine.animate({
