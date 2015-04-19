@@ -1,6 +1,6 @@
 /* game main functions */
 
-var number = 2;
+var number = 1;
 var red_wine_width = 64;
 var red_wine_height = 85;
 
@@ -32,14 +32,18 @@ function create_red_wine(){
     });
 
     red_wine.on('click tap', function(e) {
+        clearInterval(red_wine.interval_time);
+        var target = e.currentTarget;
+        $(target).off('click tap');
         click_wine($('#score'));
         // remove red_wine;
         red_wine.animate({
-            opacity: 0.20
-        }, 200, function(){
-            $('.red_wine').remove();
-            add_red_wine();
+            opacity: 0.02
+        }, 800, function(){
+            $(target).remove();
+            //add_red_wine();
         });
+        add_red_wine();
     });
     return red_wine;
 }
@@ -58,7 +62,7 @@ function append_red_wine(){
     var game_board = $('#game_board');
     game_board.append(red_wine);
     wine_position(game_board, red_wine);
-    window.setInterval(function(){
+    red_wine.interval_time = window.setInterval(function(){
         wine_position(game_board, red_wine)
     }, 1200);
 }
