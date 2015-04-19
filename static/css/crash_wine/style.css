@@ -1,6 +1,55 @@
+body {
+    text-align: center;
+    margin: auto;
+}
 
+#game_area, #game_board {
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
 
-#canvas {
-    width: 200px;
-    height: 200px;
+#game_area {
+    background: url('../../images/crash_wine/background.png');
+    margin: auto;
+}
+
+#start_game{
+    text-align: center;
+    color: white;
+}
+
+#start_game h5 {
+    position: relative;
+    top: 200px;
+}
+
+#start_game h4 {
+    position: relative;
+    top: 250px;
+    color: red;
+    background-color: white;
+    padding: 5px 10px;
+    margin: auto;
+    width: 80px;
+}
+
+.red_wine {
+    background-image: url('../../images/crash_wine/red_wine.jpg');
+    background-size: 64px 85px;
+    position: absolute;
+}
+
+#game_score {
+    color: white;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    margin: 0;
+}
+
+#game_over h4 {
+    color: white;
+    position: relative;
+    top: 200px;
 }

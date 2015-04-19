@@ -1,18 +1,17 @@
 
 $(function() {
-            window.fbAsyncInit = function() {
-            FB.init({
-                    appId      : '801367206608067',
-                    xfbml      : true,
-                    version    : 'v2.3'
-                });
-            
 
-            // ADD ADDITIONAL FACEBOOK CODE HERE
-        };
-        
-        var canvas = $("#canvas");
+    $('#start_game h4').click(function(){
+        $('#start_game').addClass('hidden');
+        add_red_wine();
+        $('#game_board').removeClass('hidden');
 
-        initGame(canvas);
-        
+        setTimeout(function(){
+            var score = $('#score').data('score');
+            $('#final_score').text(score);
+            $('#game_board').addClass('hidden');
+            $('#game_over').removeClass('hidden');
+        }, 8000);
+    });
+    
 });

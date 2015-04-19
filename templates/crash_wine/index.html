@@ -19,18 +19,24 @@
     <!--script src="{% static 'js/crash_wine/ui.js' %}"></script-->
     <script src="{% static 'js/crash_wine/game.js' %}"></script>
 
-    <!--[if IE]><script src="{% static 'js/excanvas.js' %}"></script><![endif]-->
 {% endblock %}
 
 {% block body %}
     <h1 id="fb-welcome"></h1>
 
-    <section>
-
-      <div id="game_board">
-        <canvas id="canvas"></canvas>
+    <div id="game_area">
+      <div id="start_game">
+        <h5>Tap Red Wine</h5>
+        <h4>START</h4>
       </div>
-      
-    </section>
+    
+      <div id="game_board" class="hidden">
+        <h4 id="game_score">Score: <span id="score" data-score=0>0</span></h4>
+      </div>
 
+      <div id="game_over" class="hidden">
+        <h4>Your final score is: <span id="final_score">...</span> </h4>
+      </div>
+    </div>    
+    
 {% endblock %}
